@@ -2,11 +2,80 @@
 // colors
 :root {
   // base
-  --font-family: "Open Sans", sans-serif;
-  --content-width: 1170px;
+  --font-family: "Urbanist", sans-serif;
+  --second-family: "8-BIT-Hud", sans-serif;
+  --third-family: "Gilroy", sans-serif;
+
+  --content-width: 1440px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors
-  --light-color: #fff;
+	--primary---900: #020b15;
+	--primary---800: #062040;
+	--primary---700: #0d407f;
+	--primary---600: #15a;
+	--primary---500: #156ad4;
+	--primary---400: #48d;
+	--primary---200: #73a6e5;
+	--primary---300: #b9d2f2;
+	--primary---100: #e8f0fb;
+	--secondary---900: #1a0c04;
+	--secondary---800: #4d240d;
+	--secondary---700: #994719;
+	--secondary---600: #cc5f22;
+	--secondary---500: #ff772a;
+	--secondary---400: #ff9255;
+	--secondary---200: #ffad7f;
+	--secondary---300: #ffd6bf;
+	--secondary---100: #fff1ea;
+	--grey---900: #242424;
+	--grey---800: #404040;
+	--grey---700: #555;
+	--grey---600: #757575;
+	--grey---500: #9e9e9e;
+	--grey---400: #c2c2c2;
+	--grey---300: #e0e0e0;
+	--grey---200: #ededed;
+	--grey---100: #f5f5f5;
+	--success---900: #105f05;
+	--success---800: #1c7208;
+	--success---700: #2d8e0d;
+	--success---600: #41aa13;
+	--success---500: #5ac61b;
+	--success---400: #8bdc4d;
+	--success---300: #afed72;
+	--success---200: #d2f9a3;
+	--success---100: #ebfcd0;
+	--information---900: #037;
+	--information---800: #004790;
+	--information---700: #0065b3;
+	--information---600: #0087d6;
+	--information---500: #00aef9;
+	--information---400: #3ecffb;
+	--information---300: #65e3fd;
+	--information---200: #98f4fe;
+	--information---100: #cbfcfe;
+	--warning---900: #6d6602;
+	--warning---800: #847c04;
+	--warning---700: #a49b06;
+	--warning---600: #c4ba09;
+	--warning---500: #e5da0d;
+	--warning---400: #efe746;
+	--warning---300: #f7f16b;
+	--warning---200: #fcf99d;
+	--warning---100: #fdfccd;
+	--danger---900: #7a0b2f;
+	--danger---800: #931231;
+	--danger---700: #b71d35;
+	--danger---600: #db2a36;
+	--danger---500: #ff3d3a;
+	--danger---400: #ff7a6b;
+	--danger---300: #ff9e88;
+	--danger---200: #ffc5b0;
+	--danger---100: #ffe5d7;
+
+  --white: #fff
+  --black: #000
+  --black-lighter: #222
 }
