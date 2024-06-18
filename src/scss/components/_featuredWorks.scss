@@ -21,7 +21,6 @@
   }
 
   &__title {
-    // text-wrap: nowrap;
     display: flex;
     align-items: center;
     margin: 72px 0 46px;
@@ -46,7 +45,7 @@
 
   &__swiper {
     padding-bottom: 50px;
-    
+
     .swiper-scrollbar {
       margin-top: 36px;
     }
