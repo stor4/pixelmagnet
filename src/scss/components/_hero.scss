@@ -1,5 +1,4 @@
 .hero {
-
   &__container {
     display: flex;
     padding: 32px 76px;
@@ -7,26 +6,27 @@
 
   &__main {
     display: flex;
-    flex-direction: column;
     flex: 1 50%;
+    flex-direction: column;
 
     h1 {
+      position: relative;
+      margin-top: 10px;
       font-weight: 900;
+
       // font-size: 96px;
       font-size: clamp(48px, 7vw, 96px);
-      text-wrap: nowrap;
       letter-spacing: -0.03em;
       text-transform: uppercase;
-      margin-top: 10px;
-      position: relative;
+      text-wrap: nowrap;
     }
 
     p {
+      margin-top: 16px;
       font-size: 20px;
       line-height: 170%;
       letter-spacing: 0.01em;
       color: var(--grey---700);
-      margin-top: 16px;
     }
   }
 
@@ -36,22 +36,22 @@
     justify-content: center;
 
     &-title {
-      font-weight: 700;
-      font-size: 20px;
-      color: var(--secondary---500);
       position: relative;
       margin-left: 30px;
       padding-top: 15px;
+      font-weight: 700;
+      font-size: 20px;
       text-align: center;
+      color: var(--secondary---500);
 
       &::before {
         content: '';
-        height: 36px;
-        width: 36px;
-        background-image: url(../../img/hero_aside_icon.svg);
         position: absolute;
         left: 0;
         top: 10px;
+        width: 36px;
+        height: 36px;
+        background-image: url("../../img/hero_aside_icon.svg");
         transform: translateX(15%);
       }
     }
@@ -63,17 +63,17 @@
     }
 
     li {
+      font-weight: 400;
       font-size: 20px;
       line-height: 170%;
       letter-spacing: 0.01em;
       color: var(--grey---700);
-      font-weight: 400;
     }
 
     &-more {
-      color: var(--primary---500);
       display: flex;
       align-items: center;
+      color: var(--primary---500);
       gap: 8px
     }
   }
