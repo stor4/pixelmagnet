@@ -53,6 +53,16 @@
     align-items: end;
     width: 100%;
 
+    &-link {
+      color: var(--grey---700);
+    }
+
+    &-btn {
+      img {
+        margin-left: 6px;
+      }
+    }
+
     ul {
       display: flex;
       justify-content: end;
@@ -60,25 +70,6 @@
       padding-right: 47px;
       width: 100%;
       gap: 72.39px;
-
-
-      button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid var(--grey---700);
-        border-radius: 100px;
-        padding: 4px 24px;
-        width: 176px;
-        height: 44px;
-        letter-spacing: 1px;
-        cursor: pointer;
-        text-wrap: nowrap;
-
-        img {
-          margin-left: 6px;
-        }
-      }
     }
   }
 }
