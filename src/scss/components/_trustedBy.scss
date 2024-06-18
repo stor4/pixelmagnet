@@ -19,6 +19,10 @@
     gap: clamp(24px, 4vw, 50px);
     text-wrap: nowrap;
 
+    li {
+      user-select: none;
+    }
+
     li:nth-child(odd) {
       color: var(--grey---700);
     }

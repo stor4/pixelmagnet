@@ -148,5 +148,62 @@ a {
   &:disabled {
     background: var(--grey---400);
   }
-
 }
+
+.swiper {
+  overflow: visible;
+}
+
+.swiper-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 1px dashed var(--grey---700);
+  border-radius: 3px;
+  width: 6px;
+  max-height: 1px;
+  background-color: #ccc;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.swiper-scrollbar-drag {
+  position: absolute;
+  top: -18px;
+  overflow: visible;
+  border: 1px solid var(--grey---500);
+  border-radius: 200px;
+  padding: 8px 16px;
+  width: 100%;
+  height: 40px;
+  max-width: 80px;
+  background-color: var(--white);
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    left: 17px;
+    top: 7px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/swiper_arrow.svg");
+  }
+
+  &::after {
+    left: auto;
+    right: 17px;
+    transform: rotate(180deg);
+  }
+}
+
+.swiper-scrollbar-hidden {
+  opacity: 0;
+}
+
