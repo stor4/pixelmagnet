@@ -8,37 +8,38 @@
     display: flex;
     flex-direction: column;
     margin: 0 32px;
-    max-width: 1376px;
 
     // height: 424px;
     // background-image: url(../../img/heroBottom_bg.svg);
     // background-repeat: no-repeat;
     width: 100%;
+    max-width: 1376px;
   }
 
   &__bg {
-    height: 100%;
-
-    height: 424px;
-    background-image: url("../../img/heroBottom_bg.svg");
-    // background-size: contain;
-    background-repeat: no-repeat;
-    display: flex;
     position: relative;
+    display: flex;
     flex-direction: column;
     justify-content: end;
-    width: 100%;
     border-radius: 16px;
+    width: 100%;
+    height: 100%;
+    height: 424px;
+    background-image: url("../../img/heroBottom_bg.svg");
+
+    // background-size: contain;
+    background-repeat: no-repeat;
   }
 
   &__companies {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     // position: absolute;
     // left: 32px;
     // bottom: 32px;
     margin: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-radius: 100px;
     padding: 4px 36px;
     width: 519px;
@@ -69,6 +70,7 @@
     border-radius: 12px;
     padding: 24px 16px;
     width: 356px;
+
     // height: 354px;
     background: #fff;
 
@@ -98,39 +100,40 @@
     }
 
     &__bg {
-      background-size: cover;
-      background-position: 30%, 0;
+      align-items: center;
+
       // background-size: 300%;
       border-radius: 16px;
       background-image: url("../../img/heroBottom_bg_mob.svg");
-      align-items: center;
+      background-position: 30%, 0;
+      background-size: cover;
     }
 
     &__companies {
+      left: 12%;
+      top: 329px;
+      margin: 25px;
       border-radius: 100px;
       padding: 4px 36px;
       width: 295px;
       height: 68px;
-      top: 329px;
-      left: 12%;
-      margin: 25px;
 
       h2 {
         font-size: 32px;
       }
 
       p {
+        font-weight: 900;
         font-size: 20px;
         line-height: 170%;
-        font-weight: 900;
         text-wrap: nowrap;
       }
     }
 
     &__quote{
       position: static;
-      background: var(--primary---100);
       width: auto;
+      background: var(--primary---100);
     }
   }
 }
