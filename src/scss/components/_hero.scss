@@ -1,0 +1,101 @@
+.hero {
+
+  &__container {
+    display: flex;
+    padding: 32px 76px;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 50%;
+
+    h1 {
+      font-weight: 900;
+      // font-size: 96px;
+      font-size: clamp(48px, 7vw, 96px);
+      text-wrap: nowrap;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      margin-top: 10px;
+      position: relative;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 170%;
+      letter-spacing: 0.01em;
+      color: var(--grey---700);
+      margin-top: 16px;
+    }
+  }
+
+  &__aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &-title {
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--secondary---500);
+      position: relative;
+      margin-left: 30px;
+      padding-top: 15px;
+      text-align: center;
+
+      &::before {
+        content: '';
+        height: 36px;
+        width: 36px;
+        background-image: url(../../img/hero_aside_icon.svg);
+        position: absolute;
+        left: 0;
+        top: 10px;
+        transform: translateX(15%);
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    li {
+      font-size: 20px;
+      line-height: 170%;
+      letter-spacing: 0.01em;
+      color: var(--grey---700);
+      font-weight: 400;
+    }
+
+    &-more {
+      color: var(--primary---500);
+      display: flex;
+      align-items: center;
+      gap: 8px
+    }
+  }
+
+  &__circle-mob {
+    display: none;
+  }
+
+}
+
+@include big-tablet {
+  .hero {
+    &__aside {
+      visibility: hidden;
+    }
+
+    &__circle-mob {
+      display: block;
+    }
+
+    &__circle-desk {
+      display: none;
+    }
+  }
+}
