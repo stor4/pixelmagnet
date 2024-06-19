@@ -1,0 +1,77 @@
+.cta {
+  &__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(62px, 5vw, 146px) clamp(16px, 5vw,72px);
+
+    // background-image: url(../../img/cta_bg.svg);
+    background: var(--primary---500);
+  }
+
+  &__text {
+    position: relative;
+    z-index: 2;
+    font-family: var(--font-family);
+    font-weight: 900;
+    font-size: clamp(32px, 5vw, 96px);
+    letter-spacing: -0.03em;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--white);
+
+    span {
+      z-index: 1;
+      border-radius: 81px;
+
+      // width: 595px;
+      // height: 140px;
+      padding: clamp(5px, 2vw, 15px) clamp(10px, 5vw, 25px);
+      background: var(--secondary---500);
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    right: 0;
+
+    // top: 300px;
+    // right: 260px;
+    top: 0;
+    z-index: 3;
+    border: 10px solid var(--primary---500);
+    border-radius: 100%;
+    width: clamp(166px, 5vw, 239px);
+    height: clamp(166px, 5vw, 239px);
+    font-family: var(--font-family);
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--primary---500);
+    fill: var(--white);
+    stroke: var(--primary---500);
+    stroke-width: 12px;
+    transform: translate(-110%, 130%);
+  }
+}
+
+@include big-tablet {
+  .cta {
+    &__container {
+      flex-direction: column;
+      gap: 35px;
+    }
+
+    &__btn {
+      position: static;
+      transform: translate(0%);
+    }
+
+    &__br {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,143 @@
+.services {
+  &__container {
+    padding: 0 76px 72px;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: var(-black-lighter);
+
+    // margin: 0 76px;
+
+    p {
+      flex: 1;
+      font-size: clamp(32px, 5vw, 96px);
+    }
+  }
+
+  &__more {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 400;
+    font-size: сlamp(16px, 4vw, 20px);
+    line-height: 170%;
+    letter-spacing: 0.01em;
+    text-transform: none;
+    color: var(--primary---500);
+    gap: 8px;
+    text-wrap: nowrap;
+
+    img {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    margin-top: 46px;
+    font-weight: 500;
+    font-size: clamp(24px, 5vw, 48px);
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    color: var(--black-lighter);
+    gap: 64px;
+  }
+
+  &__imgs {
+    position: relative;
+    width: 100%;
+    height: 303px;
+    max-width: 464px;
+
+    img {
+      position: absolute;
+      width: 238px;
+      height: 163px;
+
+      &:nth-child(1) {
+        left: 0;
+        top: 52px;
+      }
+
+      &:nth-child(2) {
+        right: 0;
+        top: 0;
+        z-index: 2;
+      }
+
+      &:nth-child(3) {
+        right: 59px;
+        bottom: 0;
+        z-index: 3;
+      }
+    }
+  }
+
+  &__bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 78px;
+    gap: 24px;
+  }
+
+  &__card {
+    display: flex;
+    align-items: end;
+    border: 1px solid var(--primary---500);
+    border-radius: 24px;
+    padding: 24px;
+
+    // width: 413px;
+    height: clamp(125px, 25vw, 195px);
+    font-weight: 500;
+    font-size: clamp(24px, 5vw, 32px);
+    line-height: 140%;
+    text-transform: uppercase;
+    color: var(--primary---500);
+    background: rgba(21, 106, 212, 0.1);
+    cursor: pointer;
+  }
+}
+
+@include big-tablet {
+  .services {
+    &__container {
+      padding: 0 16px 72px;
+    }
+
+    &__top {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__imgs {
+      scale: 0.73075;
+    }
+
+    &__bottom {
+      grid-template-columns: 1fr;
+    }
+
+    &__card {
+      align-items: center;
+      line-height: 160%;
+    }
+  }
+}
+
+.sc-active {
+  align-items: end;
+  border: 1px solid var(--secondary---500);
+  font-weight: 900;
+  color: var(--b&w-white);
+  color: var(--white);
+  background: var(--secondary---500);
+  cursor: default;
+}
