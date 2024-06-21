@@ -17,6 +17,9 @@
   &__logo {
     padding-top: 10px;
     padding-left: 61px;
+    font-family: var(--second-family);
+    font-size: clamp(6px, 5vw, 12px);
+    text-transform: uppercase;
     user-select: none;
   }
 

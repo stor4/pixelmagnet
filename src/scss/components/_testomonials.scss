@@ -1,0 +1,112 @@
+.testemonials {
+  &__container {
+    padding: 56px 76px;
+    max-height: 667px;
+  }
+
+  &__swiper {
+    overflow: hidden;
+    width: 100%;
+    height: 605px;
+
+    .swiper-pagination {
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .swiper-pagination-bullet {
+      margin: 10px 0;
+      width: 12px;
+      height: 12px;
+      background: #f1f1f1;
+      opacity: 0.5;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: var(--primary---500);
+      opacity: 1;
+    }
+
+    .swiper-pagination-container {
+      position: absolute;
+      right: 0;
+      right: 100px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      position: absolute;
+      left: -40px;
+      top: -100px;
+      width: 44px;
+      height: 44px;
+      color: #000;
+
+      // top: 0;
+      // transform: rotate(90deg);
+      background-image: url("../../img/arrow.svg");
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      display: none;
+    }
+
+    .swiper-button-next {
+      position: absolute;
+      top: 100px;
+      border-radius: 59px;
+      padding: 24px;
+      background: var(--primary---500);
+      background-image: url("../../img/arrow2.svg");
+      background-position: 40%, 10%;
+      transform: rotate(180deg);
+    }
+  }
+
+  &__slide {
+    max-width: 1119px;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    color: var(--b&w-black-lighter);
+
+    img {
+      margin-bottom: 46px;
+    }
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    margin-top: 46px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+    text-transform: uppercase;
+    color: var(--grey---700);
+    gap: 16px;
+
+    img {
+      width: 72px;
+      height: 72px;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+  }
+
+  &__name {
+    font-size: 24px;
+    text-transform: none;
+    color: var(--black);
+  }
+}
+
