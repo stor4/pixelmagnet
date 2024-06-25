@@ -1,5 +1,5 @@
 .header {
-  height: 138px;
+  height: clamp(100px, 8vw, 138px);
   font-size: 20px;
   line-height: 170%;
   letter-spacing: 0.01em;
@@ -18,7 +18,7 @@
     padding-top: 10px;
     padding-left: 61px;
     font-family: var(--second-family);
-    font-size: clamp(6px, 5vw, 14px);
+    font-size: clamp(6px, 2.6vw, 14px);
     text-transform: uppercase;
     user-select: none;
   }
@@ -29,23 +29,23 @@
       right: 18.5px;
       display: none;
       border-radius: 12px;
-      width: 27px;
-      height: 3px;
+      width: clamp(20px, 0.5vw, 27px);
+      height: clamp(2px, 0.5vw, 3px);
       background-color: #000;
       cursor: pointer;
 
       &::after, &::before {
         content: '';
         position: absolute;
-        top: 7px;
+        top: clamp(5px, 0.5vw, 7px);
         border-radius: 12px;
-        width: 27px;
-        height: 3px;
+        width: clamp(20px, 0.5vw, 27px);
+        height: clamp(2px, 0.5vw, 3px);
         background-color: #000;
       }
 
       &::before {
-        top: -7px;
+        top: clamp(-5px, 0.5vw, -7px);
       }
     }
   }

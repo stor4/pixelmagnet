@@ -111,7 +111,7 @@ h1.hero__text-mob {
 @include big-tablet {
   .hero {
     &__container {
-      padding: 32px 16px;
+      padding: 25px 16px 18px;
     }
 
     &__aside {
@@ -134,5 +134,7 @@ h1.hero__text-mob {
 
   h1.hero__text-mob {
     display: block;
+    margin: 0;
+    width: 100%;
   }
 }

@@ -6,6 +6,15 @@
     justify-content: center;
     padding: clamp(62px, 10.5vw, 146px) clamp(16px, 5vw,72px);
     background: var(--primary---500);
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: url("../../img/waves.svg");
+      opacity: 0.1;
+    }
   }
 
   &__text {

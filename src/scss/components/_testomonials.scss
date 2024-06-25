@@ -5,7 +5,7 @@
   }
 
   &__swiper {
-    overflow: hidden;
+    // overflow: hidden;
     width: 100%;
     height: 605px;
 
@@ -13,6 +13,11 @@
       right: 10px;
       top: 50%;
       transform: translateY(-50%);
+    }
+
+    .swiper-wrapper {
+      overflow: hidden;
+      height: 605px;
     }
 
     .swiper-pagination-bullet {
@@ -32,10 +37,10 @@
       position: absolute;
 
       // right: 0;
-      right: 100px;
+      right: 28px;
 
       // right: clamp(20px, 5vw, 100px);
-      top: 50%;
+      top: 45%;
       transform: translateY(-50%);
     }
 
@@ -47,9 +52,6 @@
       width: 44px;
       height: 44px;
       color: #000;
-
-      // top: 0;
-      // transform: rotate(90deg);
       background-image: url("../../img/arrow.svg");
     }
 
@@ -60,12 +62,14 @@
 
     .swiper-button-next-desk {
       position: absolute;
+      left: -62px;
       top: 100px;
       border-radius: 59px;
-      padding: 24px;
+      padding: 48px;
       background: var(--primary---500);
       background-image: url("../../img/arrow2.svg");
-      background-position: 40%, 10%;
+      background-position: 50%, 10%;
+      background-repeat: no-repeat;
       transform: rotate(180deg);
     }
 

@@ -1,10 +1,14 @@
 .footer {
+  display: flex;
+  justify-content: center;
   padding-top: 72px;
+  width: 100%;
   color: var(--white);
   background-color: var(--black-lighter);
 
   &__container {
     margin: auto 60px;
+    width: 100%;
     max-width: 1264px;
     font-family: var(--font-family);
     font-weight: 500;
@@ -95,9 +99,21 @@
 
 @include big-tablet {
   .footer {
+    &__container {
+      margin: 0;
+    }
+    
     &__top {
       flex-direction: column;
-      gap: 72px
+      gap: 72px;
+
+      ul {
+        padding-left: 0;
+      }
+
+      &-info {
+        flex-direction: column;
+      }
     }
 
     &__bottom {
@@ -106,6 +122,7 @@
       text-transform: none;
 
       div {
+        position: static;
         display: flex;
         justify-content: center;
         gap: 32px;
