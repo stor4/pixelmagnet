@@ -1,6 +1,6 @@
 .services {
   &__container {
-    padding: 0 76px 72px;
+    padding: 80px 76px 72px;
   }
 
   &__title {
@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: center;
     font-weight: 900;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.2em;
     text-transform: uppercase;
     color: var(-black-lighter);
 
@@ -16,7 +16,7 @@
 
     p {
       flex: 1;
-      font-size: clamp(32px, 5vw, 96px);
+      font-size: clamp(32px, 7vw, 96px);
     }
   }
 
@@ -24,8 +24,9 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-right: 0;
     font-weight: 400;
-    font-size: сlamp(16px, 4vw, 20px);
+    font-size: clamp(16px, 5vw, 20px);
     line-height: 170%;
     letter-spacing: 0.01em;
     text-transform: none;

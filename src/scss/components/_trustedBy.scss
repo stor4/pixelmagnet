@@ -12,6 +12,7 @@
   &__list {
     display: flex;
     justify-content: center;
+    margin-top: clamp(24px, 5vw, 45px);
     margin-bottom: clamp(54px, 5vw, 56px);
     font-weight: 600;
     font-size: clamp(16px, 5vw, 48px);

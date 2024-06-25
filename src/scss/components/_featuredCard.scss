@@ -1,7 +1,10 @@
 .featuredCard {
   width: 100%;
-  min-width: 269px;
-  max-width: 548px;
+  height: 100%;
+
+  // min-width: 269px;
+  max-width: 558px;
+  max-height: 728px;
 
   &__container {
     margin-top: 24px;
@@ -23,6 +26,10 @@
     font-size: clamp(14px, 5vw, 20px);
     line-height: 150%;
     color: var(--grey---700);
+  }
 
+  img {
+    height: 100%;
+    max-height: 600px;
   }
 }

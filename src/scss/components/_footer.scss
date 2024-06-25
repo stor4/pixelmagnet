@@ -4,6 +4,7 @@
   background-color: var(--black-lighter);
 
   &__container {
+    margin: auto 60px;
     max-width: 1264px;
     font-family: var(--font-family);
     font-weight: 500;
@@ -15,8 +16,8 @@
 
   &__logo {
     font-family: var(--second-family);
+    font-size: 15px;
     text-transform: uppercase;
-
   }
 
   &__top {
@@ -34,12 +35,14 @@
       display: flex;
       flex: 1;
       flex-direction: column;
+      max-width: 770px;
     }
 
     ul {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 32px 80px;
+      margin: 0;
+      gap: 29px 65px;
     }
 
     a {
@@ -47,7 +50,13 @@
     }
   }
 
+  &__company {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__company-title {
+    margin-bottom: 10px;
     font-weight: 700;
   }
 
@@ -62,14 +71,21 @@
   &__bottom {
     display: flex;
     flex-direction: row;
-    margin-top: 61px;
+    margin-top: 35px;
     padding-bottom: 55px;
     font-weight: 500;
-    font-size: 16px;
     line-height: 160%;
     text-transform: uppercase;
     color: #bababa;
     gap: 32px;
+
+    div {
+      position: relative;
+      right: -55px;
+      display: flex;
+      font-size: 16px;
+      gap: 35px;
+    }
   }
 
   &__bottom-copyright {
