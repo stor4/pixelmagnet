@@ -1,5 +1,5 @@
 .header {
-  height: clamp(100px, 8vw, 138px);
+  height: 138px;
   font-size: 20px;
   line-height: 170%;
   letter-spacing: 0.01em;
@@ -79,6 +79,8 @@
 
 @include big-tablet {
   .header {
+    height: 100px;
+    
     &__nav {
       display: none;
     }
