@@ -78,6 +78,7 @@
     margin-top: 35px;
     padding-bottom: 55px;
     font-weight: 500;
+    font-size: clamp(12px, 3vw, 16px);
     line-height: 160%;
     text-transform: uppercase;
     color: #bababa;
@@ -88,6 +89,7 @@
       right: -55px;
       display: flex;
       font-size: 16px;
+      font-size: clamp(12px, 3vw, 16px);
       gap: 35px;
     }
   }
@@ -99,20 +101,27 @@
 
 @include big-tablet {
   .footer {
+    padding-top: 52px;
+
     &__container {
       margin: 0;
     }
-    
+
     &__top {
       flex-direction: column;
+      padding-bottom: 32px;
       gap: 72px;
 
       ul {
         padding-left: 0;
+        max-width: 80%;
+        gap: 29px clamp(0px, 5vw, 65px);
       }
 
       &-info {
         flex-direction: column;
+        margin-top: 71px;
+        gap: 20px;
       }
     }
 
@@ -120,6 +129,11 @@
       flex-direction: column;
       text-align: center;
       text-transform: none;
+      gap: 25px;
+
+      &-copyright {
+        text-wrap: nowrap;
+      }
 
       div {
         position: static;
@@ -127,6 +141,10 @@
         justify-content: center;
         gap: 32px;
       }
+    }
+
+    &__company {
+      gap: 4px;
     }
   }
 }

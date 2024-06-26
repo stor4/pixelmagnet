@@ -1,10 +1,10 @@
 .trustedBy {
   &__title {
-    margin-top: clamp(94px, 5vw, 72.5px);
+    margin-top: clamp(91px, 5vw, 72.5px);
     font-family: var(--font-family);
     font-weight: 400;
     font-size: clamp(16px, 3vw, 24px);
-    line-height: 140%;
+    line-height: clamp(160%, 5vw, 140%);
     text-align: center;
     text-transform: uppercase;
     color: var(--b&w-black-lighter);
@@ -13,7 +13,7 @@
   &__list {
     display: flex;
     justify-content: center;
-    margin-top: clamp(26px, 5vw, 45px);
+    margin-top: clamp(23px, 5vw, 45px);
     margin-bottom: clamp(54px, 5vw, 56px);
     font-weight: 600;
     font-size: clamp(16px, 4vw, 48px);

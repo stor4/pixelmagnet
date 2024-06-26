@@ -186,7 +186,8 @@ a {
   border-radius: 200px;
   padding: 8px 16px;
   width: 100%;
-  height: 40px;
+  height: clamp(33px, 5vw, 40px);
+  min-width: 64px;
   max-width: 80px;
   background-color: var(--white);
 
@@ -196,9 +197,11 @@ a {
     position: absolute;
     left: 17px;
     top: 7px;
-    width: 24px;
-    height: 24px;
+    width: clamp(16px, 5vw, 24px);
+    height: clamp(16px, 5vw, 24px);
     background-image: url("../img/swiper_arrow.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   &::after {

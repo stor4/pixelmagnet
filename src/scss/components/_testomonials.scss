@@ -80,7 +80,7 @@
 
     .swiper-button-prev-mob,
     .swiper-button-next-mob {
-      right: 52px;
+      right: 36px;
       top: auto;
       bottom: 125px;
       z-index: 3;
@@ -93,7 +93,7 @@
     }
 
     .swiper-button-prev-mob {
-      left: 52px;
+      left: 36px;
     }
 
     .swiper-button-next-mob {
@@ -115,9 +115,9 @@
     color: var(--b&w-black-lighter);
 
     img {
-      margin-bottom: 46px;
-      width: 56px;
-      height: 55px;
+      margin-bottom: clamp(38px, 5vw, 46px);
+      width: clamp(42px, 5vw, 56px);
+      height: clamp(42px, 5vw, 56px);
     }
   }
 
@@ -153,7 +153,7 @@
   }
 
   &__name {
-    font-size: clamp(16px, 5vw, 24px);
+    font-size: clamp(16px, 4vw, 24px);
     text-transform: none;
     color: var(--black);
   }
@@ -162,9 +162,7 @@
 @include big-tablet {
   .testemonials {
     &__container {
-      padding: 51px 16px;
-
-      // max-height: 667px;
+      padding: clamp(0px, 3.5vw, 51px) 16px 32px;
     }
 
     &__swiper {
@@ -178,7 +176,7 @@
     }
 
     &__text {
-      // height: 100%;
+      line-height: clamp(158%, 5vw, 140%);
     }
 
     &__author {
@@ -186,9 +184,11 @@
       bottom: 32px;
       margin-top: 96px;
       font-weight: 500;
-
-      // height: 100%;
       text-transform: none;
+
+      p {
+        margin: 0;
+      }
     }
 
     &__name {

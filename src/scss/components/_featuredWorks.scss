@@ -20,17 +20,19 @@
     align-items: center;
     justify-content: center;
     font-weight: 400;
-    font-size: сlamp(16px, 4vw, 26px);
+    font-size: clamp(16px, 4vw, 26px);
     line-height: 162%;
     text-transform: none;
     color: var(--primary---500);
     gap: 8px;
+
+    // flex: 1;
   }
 
   &__title {
     display: flex;
     align-items: center;
-    margin: 72px 0 50px;
+    margin: clamp(20px,5vw,72px) 0 clamp(38px, 5vw, 50px);
     max-width: 1440px;
     font-weight: 900;
     font-size: clamp(32px, 7vw, 96px);
@@ -51,9 +53,10 @@
 
   &__swiper {
     padding-bottom: 50px;
+    padding-bottom: clamp(70px, 5vw, 50px);
 
     .swiper-scrollbar {
-      bottom: -17px;
+      bottom: clamp(14px, 5vw, -17px);
     }
   }
 }
@@ -62,6 +65,7 @@
   .featuredWorks {
     &__container {
       margin: 0;
+      padding: 16px;
     }
 
     &__title {
@@ -72,6 +76,8 @@
 
     &__view {
       display: flex;
+      flex: 1;
+      text-align: end;
     }
   }
 }

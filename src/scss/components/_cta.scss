@@ -4,7 +4,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: clamp(62px, 10.5vw, 146px) clamp(16px, 5vw,72px);
+    overflow: hidden;
+    padding: clamp(68px, 10.5vw, 146px) clamp(16px, 5vw,72px);
     background: var(--primary---500);
 
     &::after {
@@ -35,7 +36,7 @@
     span {
       z-index: 1;
       border-radius: 81px;
-      padding: clamp(5px, 2vw, 14px) clamp(10px, 5vw, 35px);
+      padding: clamp(3px, 1vw, 14px) clamp(12px, 3vw, 35px);
       width: 100px;
       background: var(--secondary---500);
     }
@@ -48,8 +49,8 @@
     z-index: 3;
     border: 10px solid var(--primary---500);
     border-radius: 100%;
-    width: clamp(166px, 17vw, 239px);
-    height: clamp(166px, 17vw, 239px);
+    width: clamp(162px, 17vw, 239px);
+    height: clamp(162px, 17vw, 239px);
     font-family: var(--font-family);
     font-weight: 900;
     font-size: 20px;
@@ -68,7 +69,8 @@
   .cta {
     &__container {
       flex-direction: column;
-      gap: 35px;
+      padding-bottom: 24px;
+      gap: 26px;
     }
 
     &__btn {

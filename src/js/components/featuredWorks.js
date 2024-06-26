@@ -16,7 +16,7 @@ var swiper = new Swiper(".featuredWorks__swiper", {
       spaceBetween: 20,
     },
     360: {
-      slidesPerView: 1.1,
+      slidesPerView: 1.255,
       spaceBetween: 16,
     }
   }

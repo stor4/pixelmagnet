@@ -31,10 +31,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    // position: absolute;
-    // left: 32px;
-    // bottom: 32px;
     margin: 32px;
     border-radius: 100px;
     padding: 4px 36px;
@@ -73,7 +69,6 @@
     background: #fff;
 
     p {
-      font-weight: 400;
       font-size: clamp(16px, 4vw, 20px);
       line-height: 170%;
       letter-spacing: 0.01em;
@@ -102,6 +97,7 @@
   .heroBottom {
     &__container {
       margin-top: 0;
+      padding: 0 16px;
       height: auto;
       gap: 16px;
     }
@@ -140,9 +136,25 @@
       position: static;
       width: auto;
       background: var(--primary---100);
+
+      span {
+        text-wrap: nowrap;
+      }
+
+      img {
+        top: -4.5px;
+      }
+
+      p {
+        margin-top: 5px;
+        line-height: 160%;
+        letter-spacing: 0.001em;
+      }
     }
 
     &__name {
+      top: 5px;
+      margin-bottom: 2px;
       font-weight: 700;
       text-transform: uppercase;
     }

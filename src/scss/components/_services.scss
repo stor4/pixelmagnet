@@ -5,28 +5,30 @@
 
   &__title {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     font-weight: 900;
     letter-spacing: -0.2em;
     text-transform: uppercase;
     color: var(-black-lighter);
-
-    // margin: 0 76px;
+    text-wrap: wrap;
 
     p {
-      flex: 1;
+      // flex: 1;
       font-size: clamp(32px, 7vw, 96px);
     }
   }
 
   &__more {
     display: flex;
+    flex: 1;
     flex-direction: row;
     align-items: center;
+    justify-content: end;
     margin-right: 0;
     font-weight: 400;
-    font-size: clamp(16px, 5vw, 20px);
+    font-size: clamp(16px, 4vw, 20px);
     line-height: 170%;
     letter-spacing: 0.01em;
     text-transform: none;
@@ -35,20 +37,20 @@
     text-wrap: nowrap;
 
     img {
-      width: 36px;
-      height: 36px;
+      width: clamp(24px, 4vw, 36px);
+      height: clamp(24px, 4vw, 36px);
     }
   }
 
   &__top {
     display: flex;
-    margin-top: 46px;
+    margin-top: clamp(0px, 5vw, 46px);
     font-weight: 500;
     font-size: clamp(24px, 5vw, 48px);
-    line-height: 140%;
+    line-height: clamp(158%, 4vw, 140%);
     letter-spacing: 0.01em;
     color: var(--black-lighter);
-    gap: 64px;
+    gap: clamp(0px, 4.4vw, 64px);
   }
 
   &__imgs {
@@ -84,8 +86,8 @@
   &__bottom {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-top: 78px;
-    gap: 24px;
+    margin-top: clamp(32px, 5vw, 78px);
+    gap: clamp(12px, 3vw, 24px);
   }
 
   &__card {
@@ -104,12 +106,24 @@
     transition: all 0.3s ease-in-out;
     cursor: pointer;
   }
+
+  &__br {
+    display: none;
+  }
 }
 
 @include big-tablet {
   .services {
     &__container {
-      padding: 0 16px 72px;
+      padding: clamp(50px, 5vw, 0px) 16px 72px;
+    }
+
+    &__title {
+      letter-spacing: -0.03em;
+    }
+
+    &__br {
+      display: block;
     }
 
     &__top {
@@ -118,6 +132,7 @@
     }
 
     &__imgs {
+      height: 243px;
       scale: 0.73075;
     }
 
@@ -129,6 +144,10 @@
       align-items: center;
       line-height: 160%;
     }
+  }
+
+  .services__card.sc-active {
+    line-height: 115%;
   }
 }
 

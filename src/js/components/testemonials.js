@@ -10,7 +10,6 @@ const swiper1 = new Swiper('.testemonials__swiper ', {
     prevEl: '.swiper-button-prev',
   },
   breakpoints: {
-    // When window width is <= 768px
     1280: {
       direction: 'vertical',
       pagination: {
