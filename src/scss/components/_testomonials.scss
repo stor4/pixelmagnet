@@ -35,9 +35,9 @@
 
     .swiper-pagination-container-desk {
       position: absolute;
-      z-index: 2;
       right: 28px;
       top: 45%;
+      z-index: 2;
       transform: translateY(-50%);
     }
 
@@ -192,6 +192,5 @@
       text-transform: uppercase;
     }
   }
-
 }
 
