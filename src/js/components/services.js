@@ -17,15 +17,15 @@ document.addEventListener('DOMContentLoaded', function() {
       desc: 'App development description goes here.'
     },
     web: {
-      img: '../img/services-4.png',
+      img: '../img/services-2.png',
       desc: 'Web development description goes here.'
     },
     digital: {
-      img: '../img/services-5.png',
+      img: '../img/services-1.png',
       desc: 'Digital transformation description goes here.'
     },
     tech: {
-      img: '../img/services-6.png',
+      img: '../img/services-3.png',
       desc: 'Technological advancement description goes here.'
     }
   };
@@ -34,11 +34,9 @@ document.addEventListener('DOMContentLoaded', function() {
     card.addEventListener('click', function() {
       const service = this.getAttribute('data-service');
 
-      // Обновление изображения и описания
       serviceImg.src = serviceContent[service].img;
       serviceDesc.innerHTML = serviceContent[service].desc;
 
-      // Удаление класса активного состояния у всех карточек и добавление его к текущей карточке
       cards.forEach(c => c.classList.remove('sc-active'));
       this.classList.add('sc-active');
     });
