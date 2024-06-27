@@ -1,6 +1,6 @@
 .trustedBy {
   &__title {
-    margin-top: clamp(91px, 5vw, 72.5px);
+    margin-top: 72.5px;
     font-family: var(--font-family);
     font-weight: 400;
     font-size: clamp(16px, 3vw, 24px);
@@ -13,7 +13,7 @@
   &__list {
     display: flex;
     justify-content: center;
-    margin-top: clamp(23px, 5vw, 45px);
+    margin-top: clamp(23px, 5vw, 38px);
     margin-bottom: clamp(54px, 5vw, 56px);
     font-weight: 600;
     font-size: clamp(16px, 4vw, 48px);
@@ -31,6 +31,14 @@
 
     li:nth-child(even) {
       color: var(--secondary---500);
+    }
+  }
+}
+
+@include big-tablet {
+  .trustedBy {
+    &__title {
+      margin-top: 91px;
     }
   }
 }
