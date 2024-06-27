@@ -115,7 +115,7 @@
 @include big-tablet {
   .services {
     &__container {
-      padding: 75px 16px 85px;
+      padding: 50px 16px 85px;
     }
 
     &__title {
@@ -124,6 +124,10 @@
 
     &__br {
       display: block;
+    }
+
+    &__desc {
+      margin-top: 35px;
     }
 
     &__top {
