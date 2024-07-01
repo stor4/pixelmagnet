@@ -1,0 +1,68 @@
+.aboutTeam {
+  color: var(--black-lighter);
+
+  &__container {
+    padding: 72px 76px;
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: clamp(32px, 5vw, 96px);
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+  }
+
+  &__top {
+    margin-top: 29px;
+    width: 100%;
+    max-width: 1288px;
+  }
+
+  &__grid {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 46px;
+    gap: 59px 32px;
+  }
+
+  &__card {
+    font-weight: 400;
+    font-size: clamp(14px, 5vw, 16px);
+    line-height: 162%;
+
+    img {
+      margin-bottom: 24px;
+      max-width: 298px;
+      aspect-ratio: 1/1;
+    }
+  }
+
+  &__name {
+    margin-bottom: 12px;
+    font-weight: 900;
+    font-size: clamp(20px, 5vw, 24px);
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+  }
+}
+
+@include big-tablet {
+  .aboutTeam {
+    &__container {
+      padding: 42px 16px 58px;
+    }
+
+    &__card {
+      img {
+        width: 164px;
+      }
+    }
+
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px 15px;
+
+    }
+  }
+}

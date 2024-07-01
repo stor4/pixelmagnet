@@ -57,14 +57,10 @@
 
     &-menu {
       position: relative;
-
-      // top: 230px;
-      top: -230px;
+      top: -300px;
       z-index: 10;
       border-bottom: 1px solid var(--grey---400);
       padding: 15px 0;
-
-      // display: none;
       width: 100%;
       background-color: var(--white);
       transition: all 0.5s ease-in-out;

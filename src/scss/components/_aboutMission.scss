@@ -1,0 +1,53 @@
+.aboutMission {
+  position: relative;
+  color: var(--white);
+  background: var(--secondary---500);
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../img/waves.svg");
+    background-position: 0% 5%;
+    background-size: contain;
+    background-repeat: repeat-y;
+    opacity: 0.1;
+  }
+
+  &__container {
+    padding: 144.5px 76px;
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: clamp(48px, 5vw, 96px);
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+  }
+
+  &__desc {
+    font-weight: 500;
+    font-size: clamp(26px, 5vw, 48px);
+    line-height: 140%;
+    letter-spacing: 0.01em;
+  }
+}
+
+@include big-tablet {
+  .aboutMission {
+    &__container {
+      padding: 42px 16px;
+    }
+
+    &__title {
+      line-height: 120%;
+    }
+
+    &__desc {
+      line-height: 180%;
+    }
+  }
+}
+
