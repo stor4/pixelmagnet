@@ -7,6 +7,7 @@
 
   &__container {
     position: relative;
+    z-index: 20;
     display: flex;
     align-items: center;
     border-bottom: 1px solid var(--grey---400);
@@ -24,9 +25,14 @@
   }
 
   &__burger {
+    position: absolute;
+    width: 100%;
+
     &-btn {
       position: absolute;
       right: 18.5px;
+      top: 50%;
+      z-index: 11;
       display: none;
       border-radius: 12px;
       width: clamp(20px, 0.5vw, 27px);
@@ -46,6 +52,37 @@
 
       &::before {
         top: clamp(-5px, 0.5vw, -7px);
+      }
+    }
+
+    &-menu {
+      position: relative;
+
+      // top: 230px;
+      top: -230px;
+      z-index: 10;
+      border-bottom: 1px solid var(--grey---400);
+      padding: 15px 0;
+
+      // display: none;
+      width: 100%;
+      background-color: var(--white);
+      transition: all 0.5s ease-in-out;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        text-align: center;
+        gap: 15px;
+
+        li {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+        }
       }
     }
   }
@@ -75,6 +112,11 @@
       gap: 72.39px;
     }
   }
+}
+
+.burger-open {
+  top: 230px;
+  display: block;
 }
 
 @include big-tablet {

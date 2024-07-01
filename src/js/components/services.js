@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   const cards = document.querySelectorAll('.services__card');
-  const serviceImg = document.getElementById('service-img');
-  const serviceDesc = document.getElementById('service-desc');
+  const serviceImg = document.getElementById('services-img');
+  const serviceDesc = document.getElementById('services__desc');
 
   const serviceContent = {
     branding: {
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const service = this.getAttribute('data-service');
 
       serviceImg.src = serviceContent[service].img;
-      serviceDesc.innerHTML = serviceContent[service].desc;
+      serviceDesc.textContent = serviceContent[service].desc;
 
       cards.forEach(c => c.classList.remove('sc-active'));
       this.classList.add('sc-active');

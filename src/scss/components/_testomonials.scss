@@ -1,6 +1,6 @@
 .testemonials {
   &__container {
-    padding: 56px 76px;
+    padding: 56px 70px 56px 76px;
     max-height: 667px;
   }
 
@@ -16,7 +16,7 @@
     }
 
     .swiper-wrapper {
-      overflow: hidden;
+      // overflow: hidden;
       height: 605px;
     }
 
@@ -35,7 +35,7 @@
 
     .swiper-pagination-container-desk {
       position: absolute;
-      right: 28px;
+      right: 34px;
       top: 45%;
       z-index: 2;
       transform: translateY(-50%);

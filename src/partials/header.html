@@ -2,7 +2,6 @@
   <div class="header__container container">
     <div class="header__logo">
       <a href="#">
-        <!-- <img src="../img/logo.svg" alt="logo"> -->
         Pixelmagnet
       </a>
     </div>
@@ -33,8 +32,34 @@
       </ul>
     </nav>
     <div class="header__burger">
-      <div class="header__burger-btn"></div>
-      <div class="header__burger-menu"></div>
+      <div class="header__burger-btn" onclick="openBurger()"></div>
+      <div class="header__burger-menu">
+        <ul>
+          <li>
+            <a class="d-link header__nav-link" href="#">Home</a>
+          </li>
+          <li>
+            <a class="d-link header__nav-link" href="#">About us</a>
+          </li>
+          <li>
+            <a class="d-link header__nav-link" href="#">Service</a>
+          </li>
+          <li>
+            <a class="d-link header__nav-link" href="#">Projects</a>
+          </li>
+          <li>
+            <a class="d-link header__nav-link" href="#">Blog</a>
+          </li>
+          <li>
+            <button class="d-btn header__nav-btn">
+              <span>
+              Let's Talk
+              </span>
+              <img src="../img/header__arrow.svg" alt="arrow"></button>
+          </li>
+        </ul>
+
+      </div>
     </div>
   </div>
 </header>

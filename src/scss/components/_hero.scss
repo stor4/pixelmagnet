@@ -48,8 +48,6 @@
       position: relative;
       margin-left: 0;
       padding-top: 7px;
-
-      // text-align: center;
       padding-left: 44px;
       font-weight: 700;
       font-size: 20px;
@@ -98,7 +96,7 @@
     height: 96px;
     height: clamp(46px, 8vw, 96px);
     background-image: url("../../img/hero_circle.svg");
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
   }
 }
