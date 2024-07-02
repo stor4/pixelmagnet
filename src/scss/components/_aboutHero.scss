@@ -1,6 +1,6 @@
 .aboutHero {
   &__container {
-    padding: 62px 76px;
+    padding: 62px 76px 55px;
   }
 
   &__top {
@@ -8,6 +8,7 @@
   }
 
   &__title {
+    max-width: 788px;
     font-weight: 500;
     font-size: clamp(24px, 5vw, 32px);
     line-height: 140%;
@@ -15,6 +16,7 @@
     color: var(--secondary---500);
 
     h1 {
+      margin-top: 10px;
       font-weight: 900;
       font-size: clamp(48px, 5vw, 64px);
       line-height: 120%;
@@ -25,7 +27,7 @@
 
   &__desc {
     font-weight: 400;
-    font-size: clamp(16px, 5vw, 20px);
+    font-size: clamp(16px, 4vw, 20px);
     line-height: 170%;
     letter-spacing: 0.01em;
     color: var(--grey---700);
@@ -44,9 +46,9 @@
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 88px;
-    gap: 24px;
+    grid-template-columns: 330px repeat(2, 1fr);
+    margin-top: 91px;
+    gap: 29px 22px;
   }
 
   &__grid-item {
@@ -76,7 +78,7 @@
 
   &__grid-num {
     font-weight: 700;
-    font-size: clamp(60px, 5vw, 96px);
+    font-size: clamp(60px, 7vw, 96px);
     color: var(--secondary---500);
   }
 }
@@ -84,7 +86,7 @@
 @include big-tablet {
   .aboutHero {
     &__container {
-      padding: 24px 16px 31px;
+      padding: 26px 16px 36px;
     }
 
     &__top {
@@ -92,10 +94,31 @@
       gap: 24px;
     }
 
+    &__title {
+      h1 {
+        margin-top: 27px;
+        line-height: 121%;
+      }
+    }
+
+    &__br {
+      display: none;
+    }
+
+    &__video {
+      margin-bottom: 21px;
+    }
+
+    &__desc {
+      line-height: 164%;
+    }
+
     &__grid {
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-top: 25px;
+      margin-left: 26px;
     }
 
     &__grid-item {

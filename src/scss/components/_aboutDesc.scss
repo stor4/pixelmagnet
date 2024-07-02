@@ -5,7 +5,7 @@
 
   &__top {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 525px repeat(2, 1fr);
     margin-bottom: 46px;
   }
 
@@ -21,8 +21,8 @@
   &__text {
     grid-column: 2/4;
     font-weight: 400;
-    font-size: clamp(16px, 5vw, 20px);
-    line-height: clamp(162%, 5vw, 170%);
+    font-size: clamp(16px, 4vw, 20px);
+    line-height: clamp(163%, 5vw, 170%);
     letter-spacing: 0.01em;
     color: var(--grey---700);
   }
@@ -34,8 +34,8 @@
     gap: 24px;
 
     &-item {
-    font-size: clamp(18px, 5vw, 20px);
-    line-height: clamp(160%, 5vw, 170%);
+    font-size: clamp(16px, 4vw, 20px);
+    line-height: clamp(160%, 4vw, 170%);
     letter-spacing: 0.01em;
     color: var(--grey---700);
 
@@ -58,12 +58,20 @@
     &__top {
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      margin-bottom: 40px;
+      gap: 22px;
     }
 
     &__grid {
       display: flex;
       flex-direction: column;
+      gap: 30px;
+
+      &-item {
+        :first-child {
+          margin-bottom: 15px;
+        }
+      }
     }
   }
 }
