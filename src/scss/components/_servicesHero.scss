@@ -1,0 +1,225 @@
+.servicesHero {
+  &__container {
+    padding: 42px 76px;
+  }
+
+  &__br {
+    display: none;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+
+    h1 {
+      font-weight: 900;
+      font-size: clamp(48px, 5vw, 64px);
+      line-height: 122%;
+      letter-spacing: clamp(-0.02em, 4vw, -0.03em);
+      text-transform: uppercase;
+      color: var(--black-lighter);
+
+      span {
+        text-wrap: nowrap;
+      }
+    }
+  }
+
+  &__text {
+    padding-bottom: 50px;
+    font-weight: 400;
+    font-size: clamp(16px, 4vw, 20px);
+    line-height: clamp(162%, 4vw, 170%);
+    letter-spacing: 0.01em;
+    color: var(--grey---700);
+  }
+
+  &__sub {
+    font-weight: 500;
+    font-size: clamp(24px, 4vw, 32px);
+    line-height: clamp(160%, 4vw, 140%);
+    text-transform: uppercase;
+    color: var(--secondary---500);
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: row;
+    margin-top: 45px;
+    gap: 24px;
+  }
+
+  &__projects {
+    position: relative;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    border-radius: 24px;
+    width: 500px;
+    height: 488px;
+    font-weight: 700;
+    font-size: clamp(60px, 7vw, 96px);
+    color: var(--white);
+    background: var(--primary---500);
+
+    p:last-child {
+      font-size: clamp(20px, 4vw, 24px);
+      text-transform: uppercase;
+    }
+
+    div {
+      margin-right: 32px;
+      margin-bottom: 42px;
+
+      div {
+        position: relative;
+        display: flex;
+        margin-bottom: 60px;
+
+        img {
+          position: absolute;
+          top: 0;
+
+          &:nth-child(1) {
+            left: 0;
+            z-index: 5;
+          }
+
+          &:nth-child(2) {
+            left: 35px;
+            z-index: 4;
+          }
+
+          &:nth-child(3) {
+            left: 70px;
+            z-index: 3;
+          }
+
+          &:nth-child(4) {
+            left: 105px;
+            z-index: 2;
+          }
+        }
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("../../img/waves.svg");
+      background-position: 0% 5%;
+      background-size: contain;
+      background-repeat: repeat-y;
+      opacity: 0.17;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-height: 488px;
+    gap: 12px 24px;
+
+    img {
+      border-radius: 24px;
+      width: 238px;
+      height: 238px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    border-radius: 24px;
+    padding: 0;
+    width: 100%;
+    max-width: 249px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    color: var(--white);
+    background: var(--secondary---500);
+    gap: 16px;
+  }
+}
+
+@include big-tablet {
+  .servicesHero {
+    &__container {
+      padding: 24px 16px;
+    }
+
+    &__top {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+
+      h1 {
+        margin-top: 25px;
+
+        span {
+          text-wrap: wrap;
+        }
+      }
+    }
+
+    &__text {
+      padding-bottom: 0;
+    }
+
+    &__br {
+      display: block;
+    }
+
+    &__bottom {
+      display: flex;
+      flex-direction: column;
+      margin-top: 22px;
+    }
+
+    &__projects {
+      width: 100%;
+      height: 212px;
+
+      div {
+        margin-right: 35px;
+
+        // scale: 0.8;
+        margin-bottom: 24px;
+        gap: 0;
+
+        div {
+          right: 20px;
+          margin-bottom: 42px;
+          scale: 0.62;
+        }
+      }
+    }
+
+    &__grid {
+      place-items: center;
+      gap: 16px 16px;
+
+      img {
+        width: clamp(163px, 20vw, 238px);
+        height: clamp(163px, 20vw, 238px);
+      }
+    }
+
+    &__list {
+      flex-direction: row;
+      overflow-x: scroll;
+      padding: 19px 1px;
+      max-width: none;
+      text-wrap: nowrap;
+    }
+  }
+}

@@ -16,6 +16,7 @@
   }
 
   &__logo {
+    z-index: 15;
     padding-top: 10px;
     padding-left: 61px;
     font-family: var(--second-family);
@@ -84,6 +85,7 @@
   }
 
   &__nav {
+    z-index: 15;
     display: flex;
     flex: 1;
     align-items: end;
