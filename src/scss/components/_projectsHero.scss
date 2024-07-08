@@ -47,8 +47,8 @@
   &__grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 24px 24px;
     margin-top: 42px;
+    gap: 24px 24px;
 
     img {
       border-radius: 24px;
