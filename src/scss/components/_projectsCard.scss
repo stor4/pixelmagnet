@@ -1,0 +1,35 @@
+.projectsCard {
+  &__container {
+    margin-top: clamp(20px, 5vw, 24px);
+  }
+
+  &__title {
+    margin-top: 0;
+    font-weight: 900;
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--black-lighter);
+  }
+
+  &__text {
+    margin-top: clamp(10px, 3vw, 16px);
+    font-weight: 700;
+    font-size: clamp(14px, 3vw, 20px);
+    line-height: 150%;
+    color: var(--grey---700);
+  }
+
+  img {
+    border-radius: 14px;
+    height: 100%;
+
+    // min-height: 294px;
+    // max-height: 600px;
+    height: auto;
+    object-fit: cover;
+
+    // aspect-ratio: 2/1;
+  }
+}

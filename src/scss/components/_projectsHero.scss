@@ -1,0 +1,138 @@
+.projectsHero {
+  &__container {
+    padding: 42px 76px;
+  }
+
+  &__top {
+    display: flex;
+
+    // align-items: center;
+    gap: 200px;
+
+    div {
+      h1 {
+        font-weight: 900;
+        font-size: clamp(48px, 4vw, 96px);
+        letter-spacing: clamp(-0.02em, 4vw, -0.03em);
+        text-transform: uppercase;
+        color: var(--b&w-black-lighter);
+      }
+    }
+  }
+
+  &__num {
+    font-weight: 700;
+    font-size: clamp(48px, 4vw, 96px);
+    color: var(--grey---700);
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 170%;
+    letter-spacing: 0.01em;
+    color: var(--grey---700);
+  }
+
+  &__sub {
+    display: none;
+    margin-bottom: 24px;
+    font-weight: 500;
+    font-size: clamp(24px, 4vw, 32px);
+    line-height: clamp(160%, 4vw, 140%);
+    text-transform: uppercase;
+    color: var(--secondary---500);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px 24px;
+    margin-top: 42px;
+
+    img {
+      border-radius: 24px;
+
+      &:nth-child(1) {
+        grid-column: 1/3;
+        grid-row: 1/3;
+      }
+
+      &:nth-child(2) {
+        grid-column: 3/4;
+        grid-row: 1/3;
+      }
+
+      &:nth-child(3) {
+        grid-column: 4/5;
+        grid-row: 1/2;
+      }
+
+      &:nth-child(4) {
+        grid-column: 5/6;
+        grid-row: 1/2;
+      }
+
+      &:nth-child(5) {
+        grid-column: 4/6;
+        grid-row: 2/3;
+      }
+    }
+  }
+}
+
+@include big-tablet {
+  .projectsHero {
+    &__container {
+      padding: 24px 16px;
+    }
+
+    &__top {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    &__sub {
+      display: block;
+    }
+
+    &__grid {
+      place-items: center;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 24px;
+      margin-top: 0;
+
+      img {
+        width: 100%;
+        max-height: 163px;
+        aspect-ratio: 1/1;
+
+        &:nth-child(1) {
+          grid-column: 1;
+          grid-row: 1;
+        }
+
+        &:nth-child(2) {
+          grid-column: 2;
+          grid-row: 1;
+        }
+
+        &:nth-child(3) {
+          grid-column: 1;
+          grid-row: 2;
+        }
+
+        &:nth-child(4) {
+          grid-column: 2;
+          grid-row: 2;
+        }
+
+        &:nth-child(5) {
+          grid-column: 1/3;
+          grid-row: 3;
+          aspect-ratio: 16/9;
+        }
+      }
+    }
+  }
+}
