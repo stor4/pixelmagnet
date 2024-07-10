@@ -12,4 +12,16 @@ const openList = (item) => {
   }
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  const categoryItems = document.querySelectorAll('.projectsCategory__item');
+
+  categoryItems.forEach(item => {
+    item.addEventListener('click', () => {
+      categoryItems.forEach(el => el.classList.remove('projectsCategory__active'));
+
+      item.classList.add('projectsCategory__active');
+    });
+  });
+});
+
 window.openList = openList

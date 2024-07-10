@@ -1,19 +1,21 @@
 .projectsHero {
   &__container {
-    padding: 42px 76px;
+    padding: 42px 76px 73px;
   }
 
   &__top {
     display: flex;
-
-    // align-items: center;
-    gap: 200px;
+    gap: 340px;
 
     div {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
       h1 {
         font-weight: 900;
-        font-size: clamp(48px, 4vw, 96px);
-        letter-spacing: clamp(-0.02em, 4vw, -0.03em);
+        font-size: clamp(48px, 7vw, 96px);
+        letter-spacing: clamp(-0.02em, 7vw, -0.03em);
         text-transform: uppercase;
         color: var(--b&w-black-lighter);
       }
@@ -22,14 +24,14 @@
 
   &__num {
     font-weight: 700;
-    font-size: clamp(48px, 4vw, 96px);
+    font-size: clamp(48px, 7vw, 96px);
     color: var(--grey---700);
   }
 
   &__text {
     font-weight: 400;
-    font-size: 20px;
-    line-height: 170%;
+    font-size: clamp(16px, 4vw, 20px);
+    line-height: clamp(162%, 4vw, 170%);
     letter-spacing: 0.01em;
     color: var(--grey---700);
   }
@@ -47,7 +49,7 @@
   &__grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    margin-top: 42px;
+    margin-top: 48px;
     gap: 24px 24px;
 
     img {
@@ -90,6 +92,18 @@
     &__top {
       flex-direction: column;
       gap: 0;
+
+      div {
+        gap: 0;
+      }
+    }
+
+    &__num {
+      margin-top: 15px;
+    }
+
+    &__text {
+      margin-top: 27px;
     }
 
     &__sub {
@@ -99,13 +113,14 @@
     &__grid {
       place-items: center;
       grid-template-columns: repeat(2, 1fr);
-      margin-top: 24px;
-      margin-top: 0;
+      margin-top: 23px;
+      row-gap: 16px;
 
       img {
+        border-radius: 16px;
         width: 100%;
         max-height: 163px;
-        aspect-ratio: 1/1;
+        aspect-ratio: 1/1.1;
 
         &:nth-child(1) {
           grid-column: 1;
