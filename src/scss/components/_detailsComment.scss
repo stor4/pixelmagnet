@@ -1,0 +1,26 @@
+.detailsComment {
+  &__container {
+    // justify-content: center;
+    position: relative;
+    display: flex;
+    padding: 56px 0 56px 77px ;
+    width: 100%;
+
+    .testemonials__slide {
+      width: 100%;
+      max-width: 1250px;
+    }
+  }
+}
+
+@include big-tablet {
+  .detailsComment {
+    &__container {
+      padding: 64px 16px 100px;
+    }
+
+    .testemonials__author {
+      bottom: 8px;
+    }
+  }
+}

@@ -17,13 +17,14 @@
   &__top {
     display: flex;
     align-items: end;
-    justify-content: space-between;
+    padding: 40px 76px 0;
+    width: 100%;
     max-width: 1440px;
-    gap: 236px;
+    gap: 280px;
 
     h1 {
       font-weight: 900;
-      font-size: clamp(48px, 4vw, 96px);
+      font-size: clamp(48px, 7vw, 96px);
       letter-spacing: clamp(-0.02em, 4vw, -0.03em);
       text-transform: uppercase;
       color: var(-black-lighter);
@@ -53,12 +54,15 @@
 
   &__img {
     position: relative;
-    top: 35px;
+    top: 40px;
+    z-index: 2;
     border-radius: 24px;
     max-width: 1288px;
   }
 
   &__bottom {
+    position: relative;
+    top: -6px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,14 +74,14 @@
   &__bottom-container {
     display: flex;
     flex-direction: column;
-    padding: 72px 76px;
+    padding: 95px 0 72px;
     max-width: 1440px;
     gap: 46px;
   }
 
   &__bottom-item {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 525px 1fr;
 
   }
 
@@ -97,6 +101,22 @@
     line-height: clamp(162%, 4vw, 170%);
     letter-spacing: 0.01em;
     color: var(--white);
+
+    li {
+      position: relative;
+      margin-left: 30px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: -16px;
+        top: 50%;
+        border-radius: 50%;
+        width: 2px;
+        height: 2px;
+        background-color: var(--white);
+      }
+    }
   }
 }
 
@@ -109,11 +129,22 @@
       gap: 0;
 
       h1 {
+        margin-top: 24px;
         line-height: 120%;
       }
     }
 
+    &__text {
+      margin-top: 18px;
+      line-height: 240%;
+
+      span {
+        font-size: 24px;
+      }
+    }
+
     &__img {
+      top: -5px;
       margin: 0 16px;
       border-radius: 16px;
       padding: 0 16px;
@@ -128,12 +159,18 @@
     }
 
     &__bottom {
+      top: -48px;
+      margin-bottom: -6px;
       padding: 0 16px;
     }
 
     &__bottom-container {
-      padding: 0;
-      padding-top: 100px;
+      padding: 113px 0 50px;
+      gap: 24px;
+    }
+
+    &__bottom-text {
+      margin-top: 25px;
     }
 
     &__bottom-item {
