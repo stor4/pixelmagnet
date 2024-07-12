@@ -1,0 +1,183 @@
+.formHero {
+  &__container {
+    padding: 42px 76px;
+  }
+
+  &__top {
+    display: flex;
+  }
+
+  &__title {
+    min-width: 763px;
+
+    h1 {
+      margin-top: 10px;
+      font-weight: 900;
+      font-size: clamp(48px, 7vw, 96px);
+      line-height: 118%;
+      letter-spacing: clamp(-0.02em, 4vw, -0.03em);
+      text-transform: uppercase;
+      color: var(--black-lighter);
+
+      span {
+        display: inline-block;
+        margin-top: 5px;
+        margin-left: 20px;
+        width: 100%;
+        width: clamp(123px, 15vw, 218px);
+        height: 96px;
+        height: clamp(46px, 8vw, 96px);
+        background-image: url("../../img/hero_circle.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &__sub {
+    font-weight: 500;
+    font-size: clamp(24px, 4vw, 32px);
+    line-height: clamp(160%, 4vw, 140%);
+    text-transform: uppercase;
+    color: var(--secondary---500);
+  }
+
+  &__imgs {
+    position: relative;
+    top: 115px;
+    width: 100%;
+    max-width: 501px;
+
+    img {
+      position: absolute;
+
+      &:nth-child(1) {
+        left: 0;
+        top: 44px;
+        border-radius: 16px;
+        width: 259px;
+        height: 216px;
+      }
+
+      &:nth-child(2) {
+        left: 242px;
+        top: 0;
+        border-radius: 16px;
+        width: 258px;
+        height: 177px;
+      }
+
+      &:nth-child(3) {
+        left: 140px;
+        top: 152px;
+        border-radius: 16px;
+        width: 221px;
+        height: 263px;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    padding-top: 5px;
+    gap: 253px;
+  }
+
+  &__text {
+    max-width: 610px;
+    font-weight: 400;
+    font-size: clamp(16px, 4vw, 20px);
+    line-height: clamp(162%, 4vw, 170%);
+    letter-spacing: 0.01em;
+    color: var(--grey---700);
+  }
+
+  &__company-container {
+    display: flex;
+    padding-top: 15px;
+    gap: 85px;
+  }
+
+  &__company {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 162%;
+    text-transform: uppercase;
+    color: var(--grey---700);
+    text-wrap: nowrap;
+  }
+
+  &__company-title {
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 180%;
+  }
+}
+
+@include big-tablet {
+  .formHero {
+    &__container {
+      padding: 24px 16px;
+    }
+
+    &__top {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__title {
+      min-width: auto;
+
+      h1 {
+        margin-top: 24px;
+        line-height: 120%;
+      }
+    }
+
+    &__imgs {
+      top: 20px;
+
+      img {
+        &:nth-child(1) {
+          left: 0;
+          top: 30px;
+          border-radius: 11px;
+          width: 177px;
+          height: 147px;
+        }
+
+        &:nth-child(2) {
+          left: 166px;
+          top: 0;
+          border-radius: 11px;
+          width: 177px;
+          height: 121px;
+        }
+
+        &:nth-child(3) {
+          left: 96px;
+          top: 104px;
+          border-radius: 11px;
+          width: 151px;
+          height: 180px;
+        }
+      }
+    }
+
+    &__bottom {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 325px;
+      gap: 9px;
+    }
+
+    &__company-container {
+      flex-direction: column;
+      padding-left: 30px;
+      gap: 17px;
+    }
+  }
+}

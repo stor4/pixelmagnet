@@ -1,0 +1,258 @@
+.formForm {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 76px 178px 54px;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      padding: 33px 16px 24px;
+      width: 100%;
+
+      // align-items: center;
+      // max-width: 1100px;
+    }
+
+    textarea {
+      border: 1px solid var(--grey---200);
+      border-radius: 24px;
+      padding: 17px 20px;
+      width: 1058px;
+      width: 100%;
+      height: 165px;
+      background: var(--grey---100);
+    }
+
+    label {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 170%;
+      letter-spacing: 0.01em;
+      color: var(--b&w---bg-1);
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    margin-bottom: 25px;
+    width: 100%;
+    gap: 24px 56px;
+  }
+
+  &__phone {
+    display: flex;
+    border: 1px solid var(--grey---200);
+    border-radius: 50px;
+    padding: 16px 16px 16px 13px;
+    width: 501px;
+    width: 100%;
+    height: 55px;
+    background: var(--grey---100);
+
+    input {
+      margin-left: 16px;
+      outline: none;
+      border: none;
+      width: 100%;
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 157%;
+      letter-spacing: 0.01em;
+      color: var(--grey---500);
+      background: transparent;
+    }
+
+    &-dropdown {
+      display: flex;
+      border-right: 1px solid var(--grey---200);
+      padding-top: 3px;
+      padding-right: 20px;
+      gap: 10px;
+    }
+
+    &-flag {
+      border-radius: 2px;
+      width: 25px;
+      height: 17px;
+    }
+
+    &-arrow {
+      width: 17px;
+      height: 17px;
+
+    }
+  }
+
+  &__budget {
+    button {
+      border: 1px solid var(--grey---700);
+      border-radius: 50px;
+      padding: 4px 24px;
+
+      // width: 95px;
+      height: 64px;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 170%;
+      letter-spacing: 0.01em;
+      color: var(--grey---700);
+      background: transparent;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: var(--white);
+        background-color: var(--black);
+      }
+    }
+
+    &-mob {
+      display: none;
+    }
+
+    &-desk {
+      display: flex;
+      gap: 15px;
+    }
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 16px;
+      gap: 15px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+
+    &:nth-child(1) {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    &:nth-child(2) {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    &:nth-child(3) {
+      grid-column: 1;
+      grid-row: 3;
+    }
+
+    &:nth-child(4) {
+      grid-column: 1;
+      grid-row: 4;
+    }
+
+    &:nth-child(5) {
+      grid-column: 1;
+      grid-row: 5;
+    }
+
+    &:nth-child(6) {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    &:nth-child(7) {
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    &:nth-child(8) {
+      grid-column: 2;
+      grid-row: 3/6;
+    }
+  }
+
+  &__privacy {
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: clamp(16px, 4vw, 20px);
+    line-height: 170%;
+    letter-spacing: 0.01em;
+    color: var(--grey---500);
+
+    a {
+      text-decoration: underline;
+      color: var(--primary---500);
+      cursor: pointer;
+      text-decoration-skip-ink: none;
+    }
+  }
+
+  &__submit {
+    margin-top: 56px;
+    border: none;
+    border-radius: 50px;
+    padding: 4px 24px;
+    width: 100%;
+    height: 64px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 170%;
+    letter-spacing: 0.01em;
+    color: var(--white);
+    background: var(--primary---500);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      border: 2px solid var(--primary---500);
+      color: var(--primary---500);
+      background: transparent;
+    }
+  }
+}
+
+@include big-tablet {
+  .formForm {
+    &__container {
+      padding: 0;
+
+      form {
+        padding: 33px 16px 31px;
+      }
+    }
+
+    &__desk {
+      display: none;
+    }
+
+    &__budget {
+      &-mob {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        div {
+          display: flex;
+          gap: 15px;
+        }
+      }
+
+      &-desk {
+        display: none;
+      }
+    }
+
+    &__grid {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__submit {
+      margin-top: 24px;
+    }
+  }
+}
