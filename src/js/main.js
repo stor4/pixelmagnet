@@ -7,3 +7,4 @@ import './components/header.js';
 import './components/servicePage.js';
 import './components/projects.js';
 import './components/article.js';
+import './components/form.js';

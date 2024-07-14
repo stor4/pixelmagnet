@@ -45,6 +45,7 @@
   }
 
   &__phone {
+    position: relative;
     display: flex;
     border: 1px solid var(--grey---200);
     border-radius: 50px;
@@ -76,6 +77,44 @@
       gap: 10px;
     }
 
+    &-list {
+      position: absolute;
+      left: -1px;
+      top: 53px;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      border: 1px solid var(--grey---200);
+      border-top: none;
+      border-bottom-right-radius: 15px;
+      border-bottom-left-radius: 15px;
+      background: var(--grey---100);
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 13px;
+        cursor: pointer;
+        gap: 7px;
+
+        &:hover {
+          background: var(--grey---200);
+        }
+      }
+    }
+
+    &-open {
+      border-bottom-left-radius: 0;
+    }
+
+    &-openList {
+      display: flex;
+    }
+
     &-flag {
       border-radius: 2px;
       width: 25px;
@@ -85,7 +124,6 @@
     &-arrow {
       width: 17px;
       height: 17px;
-
     }
   }
 
@@ -206,11 +244,23 @@
     color: var(--white);
     background: var(--primary---500);
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
 
     &:hover {
       border: 2px solid var(--primary---500);
       color: var(--primary---500);
       background: transparent;
+    }
+
+    &__selected {
+      color: var(--white);
+      background-color: var(--black);
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: var(--grey---700);
+        background: transparent;
+      }
     }
   }
 }

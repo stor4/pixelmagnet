@@ -67,6 +67,10 @@
     stroke-width: 12px;
     transform: translate(-110%, 130%);
     cursor: pointer;
+
+    a {
+      color: var(--primary---500);
+    }
   }
 }
 

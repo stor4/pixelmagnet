@@ -14,7 +14,21 @@
               <img class="formForm__phone-flag" src="../img/uk_flag.png" alt="country">
               <img class="formForm__phone-arrow" src="../img/arrowDropdown.svg" alt="dropdown-open">
             </div>
-            <input placeholder="Your number" type="text">
+            <ul class="formForm__phone-list">
+              <li>
+                <img class="formForm__phone-flag" src="../img/uk_flag.png" alt="country">
+                EN
+              </li>
+              <li>
+                <img class="formForm__phone-flag" src="../img/ua_flag.svg" alt="country">
+                UA
+              </li>
+              <li>
+                <img class="formForm__phone-flag" src="../img/de_flag.svg" alt="country">
+                GE
+              </li>
+            </ul>
+            <input placeholder="Your number" type="text" class="formForm__phone-input">
           </div>
         </div>
         <div class="formForm__item">
@@ -31,7 +45,7 @@
         </div>
         <div class="formForm__item">
           <label for="category">Category*</label>
-          <input placeholder="Select below" id="category" type="text" class="d-input">
+          <input placeholder="Category name" id="category" type="text" class="d-input">
         </div>
         <div class="formForm__item">
           <label for="location">Location*</label>
@@ -96,7 +110,7 @@
                 </div>
               </div>
             </ul>
-            <input placeholder="Or type the amount" type="text" class="d-input">
+            <input placeholder="Or type the amount" type="text" class="d-input formForm__budget-input">
           </div>
         </div>
       </div>
