@@ -128,12 +128,10 @@
   }
 
   &__budget {
-    button {
+    &-btn {
       border: 1px solid var(--grey---700);
       border-radius: 50px;
       padding: 4px 24px;
-
-      // width: 95px;
       height: 64px;
       font-weight: 400;
       font-size: 20px;
@@ -142,6 +140,7 @@
       color: var(--grey---700);
       background: transparent;
       transition: all 0.3s ease-in-out;
+      cursor: pointer;
 
       &:hover {
         color: var(--white);
@@ -251,16 +250,17 @@
       color: var(--primary---500);
       background: transparent;
     }
+  }
 
-    &__selected {
+  &__selected {
+    color: var(--white);
+    background-color: var(--black);
+    transition: all 0.3s ease-in-out;
+    cursor: çdefault;
+
+    &:hover {
       color: var(--white);
       background-color: var(--black);
-      transition: all 0.3s ease-in-out;
-
-      &:hover {
-        color: var(--grey---700);
-        background: transparent;
-      }
     }
   }
 }
