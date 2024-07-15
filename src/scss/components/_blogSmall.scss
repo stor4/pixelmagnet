@@ -1,6 +1,7 @@
 .blogSmall {
   &__container {
-    max-width: 628px;;
+    padding-bottom: 85px;
+    max-width: 628px;
   }
 
   &__img {
@@ -9,13 +10,14 @@
     img {
       border-radius: 24px;
       max-height: 572px;
-      aspect-ratio: 1/1;
+
+      // aspect-ratio: 1/1;
     }
   }
 
   &__text {
     position: relative;
-    margin-top: clamp(24px, 4vw, 42px);
+    margin-top: clamp(24px, 4vw, 38px);
 
     div {
       display: flex;
@@ -27,8 +29,9 @@
 
   &__title {
     font-weight: 900;
-    font-size: clamp(16px, 4vw, 48px);
-    line-height: clamp(180%, 4vw, 120%);
+    font-size: clamp(16px, 4vw, 38px);
+
+    // line-height: clamp(180%, 4vw, 100%);
     letter-spacing: clamp(-0.01em, 4vw, -0.02em);
     text-overflow: ellipsis;
     text-transform: uppercase;
@@ -47,6 +50,7 @@
   }
 
   &__cat {
+    display: none;
     font-weight: 700;
     font-size: clamp(12px, 3vw, 20px);
     line-height: 150%;
@@ -62,11 +66,16 @@
       flex-direction: row-reverse;
       align-items: center;
       justify-content: center;
+      padding-bottom: 0;
       max-height: 343px;
     }
 
     &__desc {
       display: none;
+    }
+
+    &__title {
+      line-height: 180%;
     }
 
     &__img {
@@ -79,7 +88,12 @@
         min-width: 90px;
         max-height: 80px;
         object-fit: cover;
+        aspect-ratio: 1 / 1;
       }
+    }
+
+    &__cat {
+      display: block;
     }
 
     &__text {

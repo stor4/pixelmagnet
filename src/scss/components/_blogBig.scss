@@ -1,4 +1,6 @@
 .blogBig {
+  padding: 0 0 94px;
+
   &__img {
     max-height: 572px;
 
@@ -15,7 +17,7 @@
       display: flex;
       flex-direction: column;
       max-width: 902px;
-      gap: 16px;
+      gap: 14px;
     }
   }
 
@@ -48,7 +50,7 @@
   &__btn {
     position: absolute;
     right: 0;
-    top: 0;
+    top: -4px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,6 +63,8 @@
 
 @include big-tablet {
   .blogBig {
+    padding: 0;
+
     &__btn {
       display: none;
     }
