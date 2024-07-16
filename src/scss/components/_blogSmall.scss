@@ -36,6 +36,11 @@
     text-overflow: ellipsis;
     text-transform: uppercase;
     color: var(--black-lighter);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__desc {
