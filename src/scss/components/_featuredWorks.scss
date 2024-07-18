@@ -50,7 +50,7 @@
     padding-bottom: clamp(70px, 5vw, 50px);
 
     .swiper-scrollbar {
-      bottom: clamp(14px, 5vw, -17px);
+      bottom: clamp(21px, 5vw, -17px);
     }
   }
 }
@@ -107,6 +107,7 @@
   &::after {
     left: auto;
     right: 17px;
+    top: 7px;
     transform: rotate(180deg);
   }
 }

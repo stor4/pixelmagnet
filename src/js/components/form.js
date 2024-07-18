@@ -1,18 +1,41 @@
+// document.addEventListener('DOMContentLoaded', function() {
+//   const buttons = document.querySelectorAll('.formForm__budget-container button');
+//   const input = document.querySelector('.formForm__budget-input');
+
+//   buttons.forEach(button => {
+//     button.addEventListener('click', function(event) {
+//       event.preventDefault();
+//       buttons.forEach(btn => btn.classList.remove('formForm__selected'));
+//       button.classList.add('formForm__selected');
+//       input.value = '';
+//     });
+//   });
+
+//   input.addEventListener('input', function() {
+//     buttons.forEach(btn => btn.classList.remove('formForm__selected'));
+
+//     if (input.value.length > 0 && input.value[0] !== '$') {
+//       input.value = '$' + input.value.replace(/\$/g, '');
+//     }
+
+//     if (input.value.length > 1 && input.value[1] === '0') {
+//       input.value = '$';
+//     }
+//   });
+// });
+
 document.addEventListener('DOMContentLoaded', function() {
-  const buttons = document.querySelectorAll('.formForm__budget-container button');
+  const buttons = document.querySelectorAll('.formForm__budget-radio');
   const input = document.querySelector('.formForm__budget-input');
 
   buttons.forEach(button => {
-    button.addEventListener('click', function(event) {
-      event.preventDefault();
-      buttons.forEach(btn => btn.classList.remove('formForm__selected'));
-      button.classList.add('formForm__selected');
+    button.addEventListener('change', function(event) {
       input.value = '';
     });
   });
 
   input.addEventListener('input', function() {
-    buttons.forEach(btn => btn.classList.remove('formForm__selected'));
+    buttons.forEach(btn => btn.checked = false);
 
     if (input.value.length > 0 && input.value[0] !== '$') {
       input.value = '$' + input.value.replace(/\$/g, '');
@@ -22,18 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
       input.value = '$';
     }
   });
-
-  // input.addEventListener('focus', function() {
-  //   if (input.value === '') {
-  //     input.value = '$';
-  //   }
-  // });
-
-  // input.addEventListener('blur', function() {
-  //   if (input.value === '$') {
-  //     input.value = '';
-  //   }
-  // });
 });
 
 document.addEventListener('DOMContentLoaded', function() {

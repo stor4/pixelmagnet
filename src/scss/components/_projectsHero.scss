@@ -112,6 +112,51 @@
 
     &__grid {
       place-items: center;
+
+      // grid-template-columns: repeat(2, 1fr);
+      margin-top: 23px;
+      row-gap: 16px;
+
+      img {
+        border-radius: 16px;
+        width: 100%;
+
+        // max-height: 163px;
+        // aspect-ratio: 1/1.1;
+      }
+    }
+  }
+}
+
+@include small-tablet {
+  .projectsHero {
+    &__container {
+      padding: 24px 16px;
+    }
+
+    &__top {
+      flex-direction: column;
+      gap: 0;
+
+      div {
+        gap: 0;
+      }
+    }
+
+    &__num {
+      margin-top: 15px;
+    }
+
+    &__text {
+      margin-top: 27px;
+    }
+
+    &__sub {
+      display: block;
+    }
+
+    &__grid {
+      place-items: center;
       grid-template-columns: repeat(2, 1fr);
       margin-top: 23px;
       row-gap: 16px;

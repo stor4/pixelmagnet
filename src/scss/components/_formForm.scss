@@ -23,6 +23,7 @@
       width: 100%;
       height: 165px;
       background: var(--grey---100);
+      resize: none;
     }
 
     label {
@@ -129,6 +130,9 @@
 
   &__budget {
     &-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       border: 1px solid var(--grey---700);
       border-radius: 50px;
       padding: 4px 24px;
@@ -146,6 +150,15 @@
         color: var(--white);
         background-color: var(--black);
       }
+    }
+
+    &-radio {
+      display: none;
+    }
+
+    &-radio:checked + .formForm__budget-btn {
+      color: var(--white);
+      background-color: var(--black);
     }
 
     &-mob {

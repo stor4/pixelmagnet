@@ -74,8 +74,13 @@
     text-align: center;
     color: var(--grey---700);
     background: var(--white);
+    transition: all 0.3s ease-in-out;
     cursor: pointer;
     text-wrap: nowrap;
+
+    &:hover {
+      background: var(--grey---100);
+    }
   }
 }
 
@@ -86,7 +91,40 @@
     }
 
     &__desk {
-      display: none;
+    //   display: none;
+      gap: 15px;
+    }
+
+    // &__mob {
+    //   display: grid;
+    //   gap: 15px;
+    // }
+
+    &__gallery {
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 33px;
+      padding: 0 16px;
+      max-height: 60px;
+
+      :nth-child(3) {
+        display: none;
+      }
+    }
+
+    &__more {
+      padding: 0 0 26px;
+    }
+  }
+}
+
+@include small-tablet {
+  .projectsGrid {
+    &__container {
+      padding: 4px 16px 16px;
+    }
+
+    &__desk {
+      display: none;;
     }
 
     &__mob {
