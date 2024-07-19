@@ -23,7 +23,7 @@
 // })
 
 document.addEventListener('DOMContentLoaded', function() {
-  const swiper = new Swiper('.swiper', {
+  const swiper = new Swiper('.featuredWorks__swiper', {
     slidesPerView: 2.2,
     spaceBetween: 32,
     scrollbar: {
@@ -42,19 +42,19 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     },
     breakpoints: {
-      1024: {
-        slidesPerView: 2.225,
-        spaceBetween: 0,
-      },
-      668: {
-        slidesPerView: 1.5,
-        spaceBetween: 20,
-      },
-      360: {
-        slidesPerView: 1.255,
-        spaceBetween: 16,
-      }
+    1024: {
+      slidesPerView: 2.225,
+      spaceBetween: 0,
+    },
+    668: {
+      slidesPerView: 1.5,
+      spaceBetween: 20,
+    },
+    360: {
+      slidesPerView: 1.255,
+      spaceBetween: 16,
     }
+  }
   });
 
   function updateScrollbarWidth(swiperInstance) {

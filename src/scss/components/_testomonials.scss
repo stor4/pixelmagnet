@@ -15,6 +15,11 @@
       transform: translateY(-50%);
     }
 
+    .swiper-slide {
+      flex: 0 0 auto;
+      width: auto;
+    }
+
     .swiper-wrapper {
       // overflow: hidden;
       height: 605px;
