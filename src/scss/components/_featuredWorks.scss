@@ -55,6 +55,67 @@
   }
 }
 
+// .swiper {
+//   overflow: visible;
+//   overflow: hidden;
+// }
+
+// .swiper-container {
+//   position: relative;
+// }
+
+// .swiper-scrollbar {
+//   position: absolute;
+//   right: 0;
+//   top: 0;
+//   bottom: 0;
+//   border: 1px dashed var(--grey---700);
+//   border-radius: 3px;
+//   width: 6px;
+//   max-height: 1px;
+//   background-color: #ccc;
+//   opacity: 0.5;
+//   transition: opacity 0.3s ease;
+// }
+
+// .swiper-scrollbar-drag {
+//   position: absolute;
+//   top: -18px;
+//   overflow: visible;
+//   border: 1px solid var(--grey---500);
+//   border-radius: 200px;
+//   padding: 8px 16px;
+//   width: 100%;
+//   height: clamp(33px, 5vw, 40px);
+//   min-width: 64px;
+//   max-width: 80px;
+//   background-color: var(--white);
+
+//   &::after,
+//   &::before {
+//     content: '';
+//     position: absolute;
+//     left: 17px;
+//     top: 7px;
+//     width: clamp(16px, 5vw, 24px);
+//     height: clamp(16px, 5vw, 24px);
+//     background-image: url("../img/swiper_arrow.svg");
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//   }
+
+//   &::after {
+//     left: auto;
+//     right: 17px;
+//     top: 7px;
+//     transform: rotate(180deg);
+//   }
+// }
+
+// .swiper-scrollbar-hidden {
+//   opacity: 0;
+// }
+
 .swiper {
   overflow: visible;
   overflow: hidden;
@@ -85,36 +146,37 @@
   border: 1px solid var(--grey---500);
   border-radius: 200px;
   padding: 8px 16px;
-  width: 100%;
   height: clamp(33px, 5vw, 40px);
   min-width: 64px;
-  max-width: 80px;
+  white-space: nowrap;
   background-color: var(--white);
+}
 
-  &::after,
-  &::before {
-    content: '';
-    position: absolute;
-    left: 17px;
-    top: 7px;
-    width: clamp(16px, 5vw, 24px);
-    height: clamp(16px, 5vw, 24px);
-    background-image: url("../img/swiper_arrow.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
+.swiper-scrollbar-drag::after,
+.swiper-scrollbar-drag::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  width: clamp(16px, 5vw, 24px);
+  height: clamp(16px, 5vw, 24px);
+  background-image: url("../img/swiper_arrow.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
-  &::after {
-    left: auto;
-    right: 17px;
-    top: 7px;
-    transform: rotate(180deg);
-  }
+.swiper-scrollbar-drag::before {
+  left: 17px;
+}
+
+.swiper-scrollbar-drag::after {
+  right: 17px;
+  transform: rotate(180deg);
 }
 
 .swiper-scrollbar-hidden {
   opacity: 0;
 }
+
 
 
 @include big-tablet {
